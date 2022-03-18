@@ -35,6 +35,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #ourApps
+    'home',
     'signup',
     #'django.contrib.staticfiles',#added to handle static files BS, ALSO ALREDAY DEFINED
 
