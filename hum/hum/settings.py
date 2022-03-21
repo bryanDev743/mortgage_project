@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     #ourApps
     'home',
     'signup',
+    'login',
     #'django.contrib.staticfiles',#added to handle static files BS, ALSO ALREDAY DEFINED
 
     #default apps
