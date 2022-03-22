@@ -2,11 +2,13 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
 
 body {
   font-family: 'Nunito', sans-serif;
   color: #384047;
+  background-image: url('../login/images/undraw_file_sync_ot38.svg');
 }
 
 form {

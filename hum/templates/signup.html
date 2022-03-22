@@ -13,7 +13,7 @@
   
     <h1>
         <br>
-        <img src="{% static 'logos/blue-green.png' %}" width="200px" height="100px">
+        <a href="{% url 'home' %}"><img src="{% static 'logos/blue-green.png' %}" width="200px" height="100px"></a>
         <br>
         <br>
         Sign Up
@@ -43,10 +43,6 @@
       <input type="text" id="name" name="user_name">
       <label for="phone">Phone#:</label>
       <input type="text" id="name" name="user_name">
-
-      <label>Age:</label>
-      <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
-      <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>
     </fieldset>
     
    
