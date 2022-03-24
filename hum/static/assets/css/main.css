@@ -115,7 +115,7 @@ input, select, textarea {
 /* Type */
 
 	body {
-		color: #999999;
+		color: #3b3b3b;
 	}
 
 	html, input, select, textarea {
@@ -427,11 +427,11 @@ input, select, textarea {
 		}
 
 		.row > .col-6 {
-			width: 50%;
+			width: 100%;
 		}
 
 		.row > .off-6 {
-			margin-left: 50%;
+			margin-left: 100%;
 		}
 
 		.row > .col-7 {
@@ -1453,11 +1453,11 @@ input, select, textarea {
 				}
 
 				.row > .col-12-small {
-					width: 100%;
+					width: 50%;
 				}
 
 				.row > .off-12-small {
-					margin-left: 100%;
+					margin-left: 50%;
 				}
 
 				.row.gtr-0 {
@@ -1650,11 +1650,11 @@ input, select, textarea {
 				}
 
 				.row > .col-6-xsmall {
-					width: 50%;
+					width: 100%;
 				}
 
 				.row > .off-6-xsmall {
-					margin-left: 50%;
+					margin-left: 100%;
 				}
 
 				.row > .col-7-xsmall {
@@ -1698,11 +1698,11 @@ input, select, textarea {
 				}
 
 				.row > .col-12-xsmall {
-					width: 100%;
+					width: 50%;
 				}
 
 				.row > .off-12-xsmall {
-					margin-left: 100%;
+					margin-left: 50%;
 				}
 
 				.row.gtr-0 {
@@ -2738,6 +2738,20 @@ input, select, textarea {
 				}
 
 		}
+/*	Added by BS*/
+/* 
+		.major .col-6{
+			width: 50%;
+		}
+
+		.major .col-12-xsmall{
+			width: 50%;
+			margin-left: 50%;
+			height: 20%;
+		} */
+		header.major .col-6{
+			width: 50%;
+		}
 
 /* Spotlight */
 
@@ -3348,6 +3362,10 @@ input, select, textarea {
 
 			.wrapper.style2 hr {
 				border-bottom-color: #e6e6e6;
+			}
+
+			.wrapper.style2 .lol{
+				margin: 50%;
 			}
 
 		.wrapper.style3 {
