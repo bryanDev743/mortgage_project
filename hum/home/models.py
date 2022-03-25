@@ -17,4 +17,32 @@ class User(models.Model):
     # def__str__(self):
     #     return self.uname + ' ' + self.email
 
+class Finance(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    age = models.IntegerField()
+    credit_score = models.IntegerField()
+    credit_line = models.IntegerField()
+    income = models.IntegerField()
+    budget = models.IntegerField()
+    debts = models.IntegerField()
+
+class Bank(models.Model):
+    bank_name = models.CharField(max_length=50)
+    country = models.CharField(max_length=50)
+    states = models.CharField(max_length=50)
+    city = models.CharField(max_length=50)
+    zipcode = models.CharField(max_length=9)
+    routing_number = models.IntegerField()
+
+class Loan(models.Model):
+    interest = models.IntegerField()
+
+class User_has_Loan(models.Model):
+    loan_id = models.ForeignKey(Loan, on_delete=models.CASCADE) 
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE) 
+
+class Bank_offers_Loan(models.Model):
+    loan_id = models.ForeignKey(Loan, on_delete=models.CASCADE) 
+    bank_id = models.ForeignKey(Bank, on_delete=models.CASCADE) 
+
 
