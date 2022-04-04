@@ -8,6 +8,13 @@ def home_view(request):
     return render(request,'index.html',{})
 
 
+def application_view(request):
+
+    #alldata = User.objects.all
+
+    return render(request,'application.html',{})
+
+
 
 
 #def 

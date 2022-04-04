@@ -125,6 +125,7 @@ setools==4.4.0
 simpleaudio==1.0.4
 simpleline==1.8.2
 six==1.16.0
+sklearn
 smmap==3.0.1
 sortedcontainers==2.4.0
 sos==4.2

@@ -20,7 +20,7 @@ from django.conf.urls.static import static #BS: for static files
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 #from . import views
 
-from home.views import home_view
+from home.views import home_view, application_view
 from login.views import login_view
 from signup.views import signup_view #for multiple view import use {}
 
@@ -29,6 +29,7 @@ urlpatterns = [
     path('', home_view, name ='home'),
     path('signup/', signup_view, name = 'signup'),
     path('login/', login_view, name = 'login'),
+    path('application/', application_view, name='application'),
 ]# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #BS: for static files
 
 urlpatterns += staticfiles_urlpatterns()
