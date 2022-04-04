@@ -20,6 +20,8 @@ class User(models.Model):
 class Finance(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     age = models.IntegerField()
+    race = models.CharField(max_length=25, default='SOME STRING')
+    gender = models.CharField(max_length=10, default='SOME STRING')
     credit_score = models.IntegerField()
     credit_line = models.IntegerField()
     income = models.IntegerField()
