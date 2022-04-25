@@ -1,0 +1,126 @@
+{% extends 'navbar.html' %}
+ {% load static %}
+
+
+ {% block content %}
+
+
+
+
+
+
+
+ 		<!-- Header -->
+ 			<header id="header">
+ 				<div class="content">
+ 					<h1><a href="#">Hum</a></h1>
+ 					<p>Making mortages easy.<br /></p>
+ 					<ul class="actions">
+ 						<li><a href="{% url 'signup' %}" class="button primary icon solid fa-download">Signup-></a></li>
+ 						<li><a href="#one" class="button icon solid fa-chevron-down scrolly">Get started</a></li>
+ 						<li><a href="{% url 'login' %}" class="button primary icon solid fa-download"><-Log in</a></li>
+ 					</ul>
+ 				</div>
+ 				<div class="image phone"><div class="inner"><img src="{% static 'logos/white.png' %}" alt="" /></div></div>
+ 			</header>
+
+
+		<!-- One -->
+			<section id="one" class="wrapper style2 special" >
+				<header class="major" style="margin-bottom:1px">
+					<h2>Let's get started!<br />
+					What's your name?</h2>
+					<br>
+					<div class="major"><!--<div class="col-6 col-12-xsmall">-->
+						<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+					</div>
+				</header>
+				<form>
+
+				<!-- </form>
+				<ul class="icons major">
+					<li><span class="icon solid fa-camera-retro"><span class="label">Shoot</span></span></li>
+					<li><span class="icon solid fa-sync"><span class="label">Process</span></span></li>
+					<li><span class="icon solid fa-cloud"><span class="label">Upload</span></span></li>
+				</ul>
+			</section> -->
+
+
+		<!-- Scripts -->
+		<section id="four" class="wrapper">
+			<div class="inner">
+
+				<section>
+					<form method="post" action="#">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+							</div>
+							<!-- <div class="col-6 col-12-xsmall">
+								<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+							</div> -->
+							<div class="col-12">
+								<select name="demo-category" id="demo-category">
+									<option value="">- Consumer -</option>
+									<option value="1">- Commercial -</option>
+									<option value="1">- Corporate -</option>
+								</select>
+							</div>
+							<div class="col-4 col-12-small">
+								<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+								<label for="demo-priority-low">Low</label>
+							</div>
+							<div class="col-4 col-12-small">
+								<input type="radio" id="demo-priority-normal" name="demo-priority">
+								<label for="demo-priority-normal">Normal</label>
+							</div>
+							<div class="col-4 col-12-small">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">High</label>
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="col-12">
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</section>
+
+
+
+			</div>
+		</section>
+
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+				<p class="copyright">&copy; Untitled. Credits: <a href="http://html5up.net">HTML5 UP</a></p>
+			</footer>
+
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+{% endblock content %}
