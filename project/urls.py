@@ -24,8 +24,10 @@ from . import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
+    path('admin', admin.site.urls, name='admin'),
     path('', views.home_view, name ='home'),
     path('signup', views.signup_view, name = 'signup'),
+    path('signup_success', views.signup_success_view, name = 'signup_success'),
     path('login', views.login_view, name = 'login'),
     path('user', views.user_view, name = 'user'),
     path('customer_form', views.create_customer, name='create_customer'),

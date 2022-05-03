@@ -65,8 +65,9 @@
       <!-- Right Login Checking stuff -->
       <ul class="navbar-nav nav-flex-icons">
 
+<!-- User authentication stuff -->
+          <!-- {% if user.is_authenticated %}
 
-          {% if user.is_authenticated %}
           <li class="nav-item">
               <a class="nav-link waves-effect">
               <span class="badge red z-depth-1 mr-1"> 0 </span>
@@ -80,17 +81,18 @@
               </a>
           </li>
            </li class="nav-item">
-              <a class="nav-link waves-effect" href="{% url 'logout' %}"> logout</a>
+              <a class="nav-link waves-effect" href="{% url 'home' %}"> logout</a>
           </li>
-          {% else %}
+          {% else %} -->
+
            </li class="nav-item">
-              <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> login</a>
+              <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
 
-              <a class="nav-link waves-effect" href="{% url 'signup' %}"> register</a>
+              <a class="nav-link waves-effect" href="{% url 'signup' %}"> Signup</a>
 
           </li>
 
-          {% endif %}
+          <!-- {% endif %} -->
       </ul>
     </nav>
     <!-- Navbar -->

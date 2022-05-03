@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Our Apps
 
     'crispy_forms',
+    'models',
 
     'django.contrib.admin',
     'django.contrib.auth',
