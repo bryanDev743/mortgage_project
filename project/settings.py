@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+#from django.contrib.auth.models import User
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,6 +21,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# from django.contrib.auth import get_user_model
+# User = get_user_model()
 
 
 # Quick-start development settings - unsuitable for production
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     # Our Apps
 
     'crispy_forms',
+    'hum',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -136,7 +140,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'hum.User'
 
+AUTHENTICATION_BACKENDS = ('hum.backends.AuthBackend',)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

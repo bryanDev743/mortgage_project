@@ -5,13 +5,11 @@ from .forms import CustomerForm
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import render_to_response
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-
-#from django.shortcuts import render_to_response
 
 # Create your views here.
 
@@ -43,6 +41,9 @@ def signup_view(request):
             messages.error(request," Email already in use")
             return redirect('signup')
 
+        if User.objects.filter(phone=phone):
+            messages.error(request," Phone number already in use")
+            return redirect('signup')
 
         if len(username) > 50 :
             messages.error(request," Username too big")

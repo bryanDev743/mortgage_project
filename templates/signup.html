@@ -9,14 +9,21 @@
 </head>
 <body>
 
-  <form action="{% url 'home' %}" method="POST">
-  
+  <form action="{% url 'signup' %}" method="POST">
+    {% csrf_token %}
     <h1>
         <br>
         <a href="{% url 'home' %}"><img src="{% static 'logos/blue-green.png' %}" width="200px" height="100px"></a>
         <br>
         <br>
         Sign Up
+        {% for message in messages %}
+        <div class="alert aler-{{ message.tags }} alert-dismissible fade show" role="alert">
+          <strong>Message:</strong> {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </div>
+        {% endfor %}
     </h1>
     
     <fieldset>
@@ -32,17 +39,17 @@
       <label for="mail">Email:</label>
       <input type="email" id="mail" name="user_email">
       <label for="mail2">Confirm Email:</label>
-      <input type="email" id="mail" name="user_email">
+      <input type="email" id="mail" name="user_email1">
       
       <label for="password">Password:</label>
       <input type="password" id="password" name="user_password">
       <label for="password2">Confrim Password:</label>
-      <input type="password" id="password" name="user_password">
+      <input type="password" id="password" name="user_password1">
       
       <label for="zipcode">Zipcode:</label>
-      <input type="text" id="name" name="user_name">
+      <input type="text" id="name" name="zipcode">
       <label for="phone">Phone#:</label>
-      <input type="text" id="name" name="user_name">
+      <input type="text" id="name" name="phone">
     </fieldset>
     
    

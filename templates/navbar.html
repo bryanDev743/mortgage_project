@@ -38,6 +38,13 @@
         <!-- Brand -->
         <a class="navbar-brand waves-effect" href="{% url 'home' %}" style="padding-right:450px;">
           <strong class="blue-text">Mortgage Website Name</strong>
+          {% for message in messages %}
+          <div class="alert aler-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+          </div>
+          {% endfor %}
         </a>
 
         <!-- Collapse -->
@@ -76,11 +83,11 @@
           </li>
           <li class="nav-item">
                <a class="nav-link waves-effect">
-              Hi Admin {{ user.username }}!
+              Hi, {{ fname }}!
               </a>
           </li>
            </li class="nav-item">
-              <a class="nav-link waves-effect" href="{% url 'logout' %}"> logout</a>
+              <a class="nav-link waves-effect" href="{% url 'signout' %}"> logout</a>
           </li>
           {% else %}
            </li class="nav-item">
