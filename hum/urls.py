@@ -32,4 +32,5 @@ urlpatterns = [
     #path('home', views.login_view, name = 'signout'),
     path('user', views.user_view, name = 'user'),
     path('customer_form', views.create_customer, name='create_customer'),
+    path('application', views.application_view, name='application')
 ]# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #BS: for static files

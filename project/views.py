@@ -1,3 +1,4 @@
+import django
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django import forms
@@ -112,5 +113,29 @@ def sign_out(request):
     messages.success(" Goodbye")
     return render(request,'index.html',{})
 
+from django.http import JsonResponse
+from copy import copy
+
+def application_view(request):
+    if request.method == "POST":
+        p = copy(request.POST)
+        name = p["search_name"]
+        #return render(request, j, {})
+        race_table = {"White": 5,
+                      "African American": 3,
+                      "Asian": 2,
+                      "Native American/Alaskan Native": 1,
+                      "Hawaiian/Pacific Islander": 4,
+                      "Prefer not to say": 6}
+        gender_table = {"Man": 1,
+                        "Woman": 2,
+                        "Prefer not to say": 3}
+        
+        r = {"race_id": race_table[p["search_race_lev"]]}
+        g = {"gender_id": gender_table[p["search_gender_lev"]]}
+        p.update(r)
+        p.update(g)
+        return JsonResponse(p)
+    return render(request, "application.html", {})
 
 #minute 41:32

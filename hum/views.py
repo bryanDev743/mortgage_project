@@ -8,10 +8,8 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render_to_response
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
-
-
-# Create your views here.
 
 def home_view(request):
     return render(request,'index.html',{})
@@ -112,6 +110,9 @@ def sign_out(request):
     logout(request)
     messages.success(" Goodbye")
     return render(request,'index.html',{})
+
+def application_view(request):
+    return render(request, "application.html", {})
 
 
 #minute 41:32
