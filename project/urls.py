@@ -31,4 +31,7 @@ urlpatterns = [
     path('login', views.login_view, name = 'login'),
     path('user', views.user_view, name = 'user'),
     path('customer_form', views.create_customer, name='create_customer'),
+    path('authentication/', include('django.contrib.auth.urls')),
+    path('authentication/', include('authentication.urls')),
+
 ]# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #BS: for static files

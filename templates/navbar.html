@@ -63,10 +63,10 @@
 
 
       <!-- Right Login Checking stuff -->
-      <ul class="navbar-nav nav-flex-icons">
+        <ul class="navbar-nav nav-flex-icons">
 
 <!-- User authentication stuff -->
-          <!-- {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
 
           <li class="nav-item">
               <a class="nav-link waves-effect">
@@ -80,31 +80,41 @@
               Hi Admin {{ user.username }}!
               </a>
           </li>
+
            </li class="nav-item">
               <a class="nav-link waves-effect" href="{% url 'home' %}"> logout</a>
           </li>
-          {% else %} -->
+          {% else %}
 
            </li class="nav-item">
-              <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
 
-              <a class="nav-link waves-effect" href="{% url 'signup' %}"> Signup</a>
+             <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
+
+             <a class="nav-link waves-effect" href="{% url 'signup' %}"> Signup</a>
+
+
 
           </li>
-
-          <!-- {% endif %} -->
+          {% endif %}
       </ul>
     </nav>
     <!-- Navbar -->
-
 </head>
 
 
-
+<body>
+  <br/>
+  <div style="text-align: center; padding-top: 75px; padding-bottom: 0px;">
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-danger" role="alert">
+        {{ message }}
+      </div>
+      {% endfor %}
+    {% endif %}
     {% block content %}
     {% endblock content %}
-
-
+  </div>
 
 
 
