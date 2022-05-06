@@ -299,6 +299,7 @@ a:focus {
   }
 }
 
+
 /* Column title */
 .column-title {
   margin: 0 0 40px;
@@ -1752,7 +1753,7 @@ ul.navbar-nav > li.header-get-a-quote:hover > a:after {
   color: #fff;
 }
 
-/* Service box 
+/* Service box
 
 .ts-service-box .ts-service-icon i {
   font-size: 24px;

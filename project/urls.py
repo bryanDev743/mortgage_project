@@ -29,7 +29,7 @@ urlpatterns = [
     # path('signup', views.signup_view, name = 'signup'),
     path('signup_success', views.signup_success_view, name = 'signup_success'),
     path('login', views.login_view, name = 'login'),
-    path('user', views.user_view, name = 'user'),
+    path('new_client', views.new_client_view, name = 'new_client'),
     path('authentication/', include('django.contrib.auth.urls')),
     path('authentication/', include('authentication.urls')),
 
