@@ -11,7 +11,9 @@ from models.models import *
 
 # Create your forms here.
 
-class CustomerForm(ModelForm):
+
+
+class ClientForm(ModelForm):
 	class Meta:
 			model = User
 			fields = ("fname", "lname", "uname", "email", "passw", "states", "zipcode", "phone_n", "dob")
