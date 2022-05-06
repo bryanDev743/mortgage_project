@@ -69,24 +69,21 @@
         {% if user.is_authenticated %}
 
           <li class="nav-item">
-              <a class="nav-link waves-effect">
-              <span class="badge red z-depth-1 mr-1"> 0 </span>
-              <i class="fas fa-shopping-cart"></i>
-              <span class="clearfix d-none d-sm-inline-block"> Cart </span>
-              </a>
-          </li>
-          <li class="nav-item">
                <a class="nav-link waves-effect">
-              Hi Admin {{ user.username }}!
+              Hi {{ user.username }}!
               </a>
           </li>
 
-           </li class="nav-item">
-              <a class="nav-link waves-effect" href="{% url 'home' %}"> logout</a>
+           <li class="nav-item">
+              <a class="nav-link waves-effect" href="{% url 'new_client' %}"> Register Client</a>
           </li>
+
+          <li class="nav-item">
+             <a class="nav-link waves-effect" href="{% url 'logout' %}"> logout</a>
+         </li>
           {% else %}
 
-           </li class="nav-item">
+           <li class="nav-item">
 
              <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
 
@@ -104,6 +101,7 @@
 
 <body>
   <br/>
+
   <div style="text-align: center; padding-top: 75px; padding-bottom: 0px;">
     {% if messages %}
       {% for message in messages %}
@@ -119,6 +117,13 @@
         {{ message }}
       </div>
       {% endif %}
+
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+      <div class="alert alert-info" role="alert">
+        {{ message }}
+      </div>
+      {% endif %}
+
 
       {% endfor %}
     {% endif %}
