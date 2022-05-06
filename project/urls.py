@@ -34,5 +34,6 @@ urlpatterns = [
     # path('hum/', include('django.contrib.auth.urls')),
     # path('hum/', include('hum.urls')),
     path('customer_form', views.create_customer, name='create_customer'),
-    path('application', views.application_view, name='application')
+    path('application', views.application_view, name='application'),
+    path('results', views.results_view, name="results")
 ]# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #BS: for static files
