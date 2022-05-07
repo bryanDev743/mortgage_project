@@ -79,19 +79,22 @@
           </li>
 
           <li class="nav-item">
+            <a class="nav-link waves-effect" href="{% url 'application' %}">Quick Application</a>
+         </li>
+
+          <li class="nav-item">
              <a class="nav-link waves-effect" href="{% url 'logout' %}"> logout</a>
          </li>
           {% else %}
 
            <li class="nav-item">
-
-             <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
-
-             <a class="nav-link waves-effect" href="{% url 'signup' %}"> Signup</a>
-
-
-
+          <a class="nav-link waves-effect" href="{% url 'login' %}" style="padding-right: 10px;"> Login</a>
           </li>
+
+           <li class="nav-item">
+             <a class="nav-link waves-effect" href="{% url 'signup' %}"> Signup</a>
+          </li>
+
           {% endif %}
       </ul>
     </nav>

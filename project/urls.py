@@ -27,10 +27,11 @@ urlpatterns = [
     path('admin', admin.site.urls, name='admin'),
     path('', views.home_view, name ='home'),
     # path('signup', views.signup_view, name = 'signup'),
-    path('signup_success', views.signup_success_view, name = 'signup_success'),
     path('login', views.login_view, name = 'login'),
     path('new_client', views.new_client_view, name = 'new_client'),
     path('authentication/', include('django.contrib.auth.urls')),
     path('authentication/', include('authentication.urls')),
+    path('application', views.application_view, name='application'),
+    path('results', views.results_view, name="results"),
 
 ]# + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT) #BS: for static files
